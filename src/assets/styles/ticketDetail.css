@@ -1,0 +1,31 @@
+.btn-navigate {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-navigate:hover {
+    opacity: 0.5;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    /* Adjust height to accommodate the percentage */
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

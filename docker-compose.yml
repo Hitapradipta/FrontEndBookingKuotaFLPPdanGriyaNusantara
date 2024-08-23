@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  frontend_portal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend_portal
+    ports:
+      - "5050:5050"
+    networks:
+      docker-sso-net:
+
+networks:
+  docker-sso-net:
