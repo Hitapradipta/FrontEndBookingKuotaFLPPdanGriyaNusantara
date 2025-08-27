@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { VDataTableServer } from 'vuetify/labs/VDataTable'
 import AddNewStrukturalDrawer from '@/views/user-management/struktural/AddNewStrukturalDrawer.vue'
 import type { StrukturalProperties } from '@/views/user-management/struktural/types'
 import { paginationMeta } from '@api-utils/paginationMeta'
+import { VDataTableServer } from 'vuetify/labs/VDataTable'
 
 // 👉 Store
 const searchQuery = ref('')
@@ -125,7 +125,7 @@ const fetchStructurural = async () => {
 // 👉 search filters
 
 const isAddNewStrukturalDrawerVisible = ref(false)
-const isConfirmDialogOpen = ref(false)
+const isConfirtableralogOpen = ref(false)
 
 const addData = () => {
   detailData.value = {
@@ -323,7 +323,7 @@ onMounted(() => {
           <IconBtn @click="selectData(item.id);isAddNewStrukturalDrawerVisible = !isAddNewStrukturalDrawerVisible">
             <VIcon icon="tabler-edit" />
           </IconBtn>
-          <IconBtn @click="updateDeleteData(item.id); isConfirmDialogOpen = true">
+          <IconBtn @click="updateDeleteData(item.id); isConfirtableralogOpen = true">
             <VIcon icon="tabler-trash" />
           </IconBtn>
         </template>
@@ -377,8 +377,8 @@ onMounted(() => {
     />
 
     <!-- Confirm Dialog -->
-    <ConfirmDialog
-      v-model:isDialogVisible="isConfirmDialogOpen"
+    <Confirtableralog
+      v-model:isDialogVisible="isConfirtableralogOpen"
       confirmation-question="Are you sure you want to delete this data?"
       confirm-title="Deleted!"
       confirm-msg="Your data has been deleted successfully."

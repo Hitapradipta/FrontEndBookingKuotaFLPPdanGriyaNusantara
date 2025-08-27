@@ -72,10 +72,10 @@ const sources: BundleScriptConfig = {
   ],
 
   icons: [
-    // 'mdi:home',
-    // 'mdi:account',
-    // 'mdi:login',
-    // 'mdi:logout',
+    // 'tabler:home',
+    // 'tabler:account',
+    // 'tabler:login',
+    // 'tabler:logout',
     // 'octicon:book-24',
     // 'octicon:code-square-24',
   ],

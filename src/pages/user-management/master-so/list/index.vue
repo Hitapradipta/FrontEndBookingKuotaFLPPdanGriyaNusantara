@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { VDataTableServer } from 'vuetify/labs/VDataTable'
 import AddNewMasterSODrawer from '@/views/user-management/master-so/AddNewData.vue'
 import type { DataProperties } from '@/views/user-management/master-so/types'
 import { paginationMeta } from '@api-utils/paginationMeta'
+import { VDataTableServer } from 'vuetify/labs/VDataTable'
 
 // 👉 Store
 const searchQuery = ref('')
@@ -72,7 +72,7 @@ const fetchUser = async () => {
 }
 
 const isAddNewMasterSODrawerVisible = ref(false)
-const isConfirmDialogOpen = ref(false)
+const isConfirtableralogOpen = ref(false)
 
 const addData = () => {
   masterSOData.value = {
@@ -262,7 +262,7 @@ onMounted(() => {
           <IconBtn @click="selectData(item.id_msso);isAddNewMasterSODrawerVisible = !isAddNewMasterSODrawerVisible">
             <VIcon icon="tabler-edit" />
           </IconBtn>
-          <IconBtn @click="updateDeleteData(item.id_msso); isConfirmDialogOpen = true">
+          <IconBtn @click="updateDeleteData(item.id_msso); isConfirtableralogOpen = true">
             <VIcon icon="tabler-trash" />
           </IconBtn>
         </template>
@@ -316,8 +316,8 @@ onMounted(() => {
     />
 
     <!-- Confirm Dialog -->
-    <ConfirmDialog
-      v-model:isDialogVisible="isConfirmDialogOpen"
+    <Confirtableralog
+      v-model:isDialogVisible="isConfirtableralogOpen"
       confirmation-question="Are you sure you want to delete this data?"
       confirm-title="Deleted!"
       confirm-msg="Your data has been deleted successfully."

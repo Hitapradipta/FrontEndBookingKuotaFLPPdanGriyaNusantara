@@ -20,7 +20,7 @@ const plansList = [
   { desc: 'Company - $999/month', title: 'Company', value: 'company' },
 ]
 
-const isConfirmDialogVisible = ref(false)
+const isConfirtableralogVisible = ref(false)
 
 const dialogModelValueUpdate = (val: boolean) => {
   emit('update:isDialogVisible', val)
@@ -84,7 +84,7 @@ const dialogModelValueUpdate = (val: boolean) => {
             color="error"
             variant="tonal"
             class="mt-3"
-            @click="isConfirmDialogVisible = true"
+            @click="isConfirtableralogVisible = true"
           >
             Cancel Subscription
           </VBtn>
@@ -92,8 +92,8 @@ const dialogModelValueUpdate = (val: boolean) => {
       </VCardText>
 
       <!-- 👉 Confirm Dialog -->
-      <ConfirmDialog
-        v-model:isDialogVisible="isConfirmDialogVisible"
+      <Confirtableralog
+        v-model:isDialogVisible="isConfirtableralogVisible"
         cancel-title="Cancelled"
         confirm-title="Unsubscribed!"
         confirm-msg="Your subscription cancelled successfully."

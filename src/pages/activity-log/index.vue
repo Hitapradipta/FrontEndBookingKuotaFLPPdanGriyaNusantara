@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { VDataTableServer } from 'vuetify/labs/VDataTable'
-import ExcelJS from 'exceljs'
-import { saveAs } from 'file-saver'
-import type { DataProperties } from '@/views/data-management/category/types'
+import * as helperDate from '@/helpers/dateFormatting'
 import AddDataComponent from '@/views/data-management/sub-category/AddData.vue'
 import { paginationMeta } from '@api-utils/paginationMeta'
-import * as helperDate from '@/helpers/dateFormatting'
+import ExcelJS from 'exceljs'
+import { computed, ref } from 'vue'
+import { VDataTableServer } from 'vuetify/labs/VDataTable'
 
 // 👉 Store
 const searchQuery = ref('')
@@ -68,7 +66,7 @@ const resData = computed(() => listData.value.data.data.map(
 const totalData = computed(() => listData.value.data.totalItems)
 
 const isAddDataComponentVisible = ref(false)
-const isConfirmDialogOpen = ref(false)
+const isConfirtableralogOpen = ref(false)
 
 const formattedDate = (dateString: string): string => helperDate.formattedDate(dateString)
 
@@ -206,7 +204,7 @@ const exportToExcel = async () => {
     cell.font = { bold: true }
   })
 
-  const data = await Promise.all(resDataAll.value.map(async item => {
+  const data = await Promise.all(resDataAll.value.map(async (item: any) => {
     return [
       formatDate(item.created_at, dateFormatOptions),
       item.userId.fullname,
@@ -368,8 +366,8 @@ onMounted(() => {
     />
 
     <!-- Confirm Dialog -->
-    <ConfirmDialog
-      v-model:isDialogVisible="isConfirmDialogOpen"
+    <Confirtableralog
+      v-model:isDialogVisible="isConfirtableralogOpen"
       confirmation-question="Are you sure you want to delete this data?"
       confirm-title="Deleted!"
       confirm-msg="Your data has been deleted successfully."

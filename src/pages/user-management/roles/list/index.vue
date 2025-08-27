@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { VDataTableServer } from 'vuetify/labs/VDataTable'
 import AddNewRoleDrawer from '@/views/user-management/roles/AddNewData.vue'
 import type { DataProperties } from '@/views/user-management/roles/types'
 import { paginationMeta } from '@api-utils/paginationMeta'
+import { VDataTableServer } from 'vuetify/labs/VDataTable'
 
 // 👉 Store
 const searchQuery = ref('')
@@ -68,7 +68,7 @@ const fetchRole = async () => {
 }
 
 const isAddNewRoleDrawerVisible = ref(false)
-const isConfirmDialogOpen = ref(false)
+const isConfirtableralogOpen = ref(false)
 
 const addData = () => {
   detailData.value = {
@@ -269,7 +269,7 @@ onMounted(() => {
             <VIcon icon="tabler-edit" />
           </IconBtn>
 
-          <IconBtn @click="updateDeleteData(item.id_roles); isConfirmDialogOpen = true">
+          <IconBtn @click="updateDeleteData(item.id_roles); isConfirtableralogOpen = true">
             <VIcon icon="tabler-trash" />
           </IconBtn>
         </template>
@@ -323,8 +323,8 @@ onMounted(() => {
     />
 
     <!-- Confirm Dialog -->
-    <ConfirmDialog
-      v-model:isDialogVisible="isConfirmDialogOpen"
+    <Confirtableralog
+      v-model:isDialogVisible="isConfirtableralogOpen"
       confirmation-question="Are you sure you want to delete this data?"
       confirm-title="Deleted!"
       confirm-msg="Your data has been deleted successfully."

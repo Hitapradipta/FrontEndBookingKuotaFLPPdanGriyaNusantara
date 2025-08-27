@@ -1,4 +1,3 @@
-// 1
 export const adminTI = [
   { heading: 'User Management' },
   {
@@ -9,207 +8,147 @@ export const adminTI = [
       { title: 'Roles', to: 'user-management-roles-list' },
       { title: 'Struktural', to: 'user-management-struktural-list' },
       { title: 'Struktur Organisasi', to: 'user-management-struktur-organisasi-list' },
-
     ],
   },
-  { heading: 'Audit Trail' },
+  { heading: 'Inbox' },
   {
-    title: 'Audit Trail',
-    to: { name: 'activity-log' },
+    title: 'Inbox',
+    to: { name: 'inbox' },
+    icon: { icon: 'tabler-inbox' },
+  },
+  { heading: 'Menu FLPP' },
+  {
+    title: 'Kuota',
+    to: { name: 'quota-kuota' },
+    icon: { icon: 'tabler-chart-bar' },
+  },
+  {
+    title: 'Kuota Mitra',
+    to: { name: 'quota-kuota-mitra' },
+    icon: { icon: 'tabler-users' },
+  },
+  {
+    title: 'Pengajuan Kuota',
+    to: { name: 'quota-quota-submission' },
     icon: { icon: 'tabler-ticket' },
   },
+  {
+    title: 'Jadwal Angsuran',
+    to: { name: 'quota-jadwal-angsuran' },
+    icon: { icon: 'tabler-calendar' },
+  },
+  {
+    title: 'Status Pengajuan',
+    to: { name: 'quota-submission-status' },
+    icon: { icon: 'tabler-alarm' },
+  },
+  { heading: 'Menu Griya Nusantara' },
+  {
+    title: 'Kuota',
+    to: { name: 'grinus-quota-grinus-kuota' },
+    icon: { icon: 'tabler-chart-bar' },
+  },
+  {
+    title: 'Kuota Mitra',
+    to: { name: 'grinus-quota-grinus-kuota-mitra' },
+    icon: { icon: 'tabler-users' },
+  },
+  {
+    title: 'Pengajuan Kuota',
+    to: { name: 'grinus-quota-grinus-submission' },
+    icon: { icon: 'tabler-ticket' },
+  },
+  {
+    title: 'Jadwal Angsuran',
+    to: { name: 'grinus-quota-grinus-jadwal-angsuran' },
+    icon: { icon: 'tabler-calendar' },
+  },
+  {
+    title: 'Status Pengajuan',
+    to: { name: 'grinus-quota-grinus-submission-status' },
+    icon: { icon: 'tabler-alarm' },
+  },
+  { heading: 'Master Data' },
+  {
+    title: 'Master',
+    icon: { icon: 'tabler-brand-databricks' },
+    children: [
+      { 
+        title: 'Daftar Mitra',
+        to: { name: 'master-data-daftar-mitra' },
+        icon: { icon: 'tabler-database-star' },
+      },
+      { 
+        title: 'Konfigurasi Mitra',
+        to: { name: 'master-data-konfig-mitra' },
+        icon: { icon: 'tabler-file-search' }, 
+      },
+      { 
+        title: 'Audit Log',
+        to: { name: 'master-data-audit-trail' },
+        icon: { icon: 'tabler-file-search' }, 
+      },
+    ],
+  }
 ]
-
-// 2
-export const adminMRK = [
-  // User Management category
-  { heading: 'Risk Register' },
+// 2 verifikator dan  View Semua Menu Flpp Dan Menu Grinus
+export const staffCo = [
+  { heading: 'Inbox' },
   {
-    title: 'Risk Register',
-    icon: { icon: 'tabler-folder' },
-    badgeClass: 'bg-global-info',
-    children: [
-      {
-        title: 'Database Resiko Perseroan',
-        to: 'risk-register-database-resiko-perseroan',
-        badgeClass: 'bg-global-info',
-      },
-      {
-        title: 'Report',
-        to: 'risk-register-report',
-        badgeClass: 'bg-global-info',
-      },
-    ],
+    title: 'Inbox',
+    to: { name: 'inbox' },
+    icon: { icon: 'tabler-inbox' },
   },
-  { heading: 'Data Master' },
+  { heading: 'Menu FLPP' },
   {
-    title: 'Data Master',
-    icon: { icon: 'tabler-book' },
-    children: [
-      { title: 'Risk Universe', to: 'data-management-risk-universe-list' },
-      { title: 'Kriteria Dampak', to: 'data-management-kriteria-dampak-detail' },
-      {
-        title: 'Kriteria Kemungkinan',
-        children: [
-          { title: 'Fraud', to: 'data-management-kriteria-kemungkinan-fraud' },
-          { title: 'Non Fraud', to: 'data-management-kriteria-kemungkinan-nonfraud' },
-        ],
-      },
-      { title: 'Proses Bisnis', to: 'data-management-proses-bisnis-list' },
-
-      {
-        title: 'Master IKU',
-        children: [
-          { title: 'BSC', to: 'data-management-master-iku-bsc' },
-          { title: 'Sasaran Strategis', to: 'data-management-master-iku-ss' },
-          { title: 'Manual IKU', to: 'data-management-master-iku-iku' },
-        ],
-      },
-    ],
-  },
-  { heading: 'Loss Event Database' },
-  {
-    title: 'Loss Event Database',
-    icon: { icon: 'tabler-folder' },
-    badgeClass: 'bg-global-info',
-    children: [
-      {
-        title: 'Inbox LED',
-        to: 'led-inbox-led',
-        badgeClass: 'bg-global-info',
-      },
-      {
-        title: 'Database LED',
-        to: 'led-database-led',
-        badgeClass: 'bg-global-info',
-      },
-      {
-        title: 'Report',
-        to: 'led-report',
-        badgeClass: 'bg-global-info',
-      },
-    ],
-  },
-
-  // Audit Trail category
-  { heading: 'Audit Trail' },
-
-  // Audit Trail submenu
-  {
-    title: 'Audit Trail',
-    to: { name: 'activity-log' },
+    title: 'Pengajuan Kuota',
+    to: { name: 'quota-quota-submission' },
     icon: { icon: 'tabler-ticket' },
   },
-]
-
-// 3
-export const makerDivisi = [
-  // User Management category
-  { heading: 'Risk Register' },
   {
-    title: 'Risk Register',
-    icon: { icon: 'tabler-folder' },
-    badgeClass: 'bg-global-info',
-    children: [
-      {
-        title: 'Inbox Risk Register',
-        to: 'risk-register-inbox-risk-register',
-        badgeClass: 'bg-global-info',
-      },
-      {
-        title: 'Database Resiko Perseroan',
-        to: 'risk-register-database-resiko-perseroan',
-        badgeClass: 'bg-global-info',
-      },
-      {
-        title: 'Trash',
-        to: 'risk-register-trash',
-        badgeClass: 'bg-global-info',
-      },
-    ],
+    title: 'Status Pengajuan',
+    to: { name: 'quota-submission-status' },
+    icon: { icon: 'tabler-alarm' },
   },
-  { heading: 'Loss Event Database' },
   {
-    title: 'Loss Event Database',
-    icon: { icon: 'tabler-folder' },
-    badgeClass: 'bg-global-info',
-    children: [
-      {
-        title: 'Inbox LED',
-        to: 'led-inbox-led',
-        badgeClass: 'bg-global-info',
-      },
-      {
-        title: 'Form LED',
-        to: 'led-form-led',
-        badgeClass: 'bg-global-info',
-      },
-      {
-        title: 'Daftar LED',
-        to: 'led-daftar-led',
-        badgeClass: 'bg-global-info',
-      },
-      {
-        title: 'Trash',
-        to: 'led-trash',
-        badgeClass: 'bg-global-info',
-      },
-    ],
+    title: 'Jadwal Angsuran',
+    to: { name: 'quota-jadwal-angsuran' },
+    icon: { icon: 'tabler-calendar' },
   },
-
-  // Audit Trail category
-  { heading: 'Audit Trail' },
-
-  // Audit Trail submenu
   {
-    title: 'Audit Trail',
-    to: { name: 'activity-log' },
+    title: 'Kuota',
+    to: { name: 'quota-kuota' },
+    icon: { icon: 'tabler-chart-bar' },
+  },
+  {
+    title: 'Kuota Mitra',
+    to: { name: 'quota-kuota-mitra' },
+    icon: { icon: 'tabler-users' },
+  },
+  { heading: 'Menu Griya Nusantara' },
+  {
+    title: 'Pengajuan Kuota',
+    to: { name: 'grinus-quota-grinus-submission' },
     icon: { icon: 'tabler-ticket' },
   },
-]
-
-// 4
-export const checkerDivisi = [
-  // User Management category
-  { heading: 'Risk Register' },
   {
-    title: 'Risk Register',
-    icon: { icon: 'tabler-folder' },
-    badgeClass: 'bg-global-info',
-    children: [
-      {
-        title: 'Inbox Risk Register',
-        to: 'risk-register-inbox-risk-register',
-        badgeClass: 'bg-global-info',
-      },
-      {
-        title: 'Riwayat',
-        to: 'risk-register-riwayat',
-        badgeClass: 'bg-global-info',
-      },
-    ],
+    title: 'Status Pengajuan',
+    to: { name: 'grinus-quota-grinus-submission-status' },
+    icon: { icon: 'tabler-alarm' },
   },
-  { heading: 'Loss Event Database' },
   {
-    title: 'Loss Event Database',
-    icon: { icon: 'tabler-folder' },
-    badgeClass: 'bg-global-info',
-    children: [
-      {
-        title: 'Inbox LED',
-        to: 'incident-management-list-open',
-        badgeClass: 'bg-global-info',
-      },
-    ],
+    title: 'Jadwal Angsuran',
+    to: { name: 'grinus-quota-grinus-jadwal-angsuran' },
+    icon: { icon: 'tabler-calendar' },
   },
-
-  // Audit Trail category
-  { heading: 'Audit Trail' },
-
-  // Audit Trail submenu
   {
-    title: 'Audit Trail',
-    to: { name: 'activity-log' },
-    icon: { icon: 'tabler-ticket' },
+    title: 'Kuota',
+    to: { name: 'grinus-quota-grinus-kuota' },
+    icon: { icon: 'tabler-chart-bar' },
+  },
+  {
+    title: 'Kuota Mitra',
+    to: { name: 'grinus-quota-grinus-kuota-mitra' },
+    icon: { icon: 'tabler-users' },
   },
 ]

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { adminMRK, adminTI, checkerDivisi, makerDivisi } from '@/navigation/vertical'
+import { adminTI } from '@/navigation/vertical'
 import { themeConfig } from '@themeConfig'
 
 // Components
@@ -55,18 +55,18 @@ watch([isFallbackStateActive, refLoadingIndicator], () => {
 
 // !SECTION
 
-let navItems = adminMRK
+let navItems = adminTI
 
-if (userData.value.roles_id === '1')
-  navItems = adminTI
-else if (userData.value.roles_id === '2')
-  navItems = adminMRK
-else if (userData.value.roles_id === '3')
-  navItems = makerDivisi
-else if (userData.value.roles_id === '4' || userData.value.roles_id === '5' || userData.value.roles_id === '6' || userData.value.roles_id === '7' || userData.value.roles_id === '8' || userData.value.roles_id === '9' || userData.value.roles_id === '10')
-  navItems = checkerDivisi
-else
-  navItems = adminMRK
+// if (userData.value.roles_id === '1')
+//   navItems = adminTI
+// else if (userData.value.roles_id === '2')
+//   navItems = adminMRK
+// else if (userData.value.roles_id === '3')
+//   navItems = makerDivisi
+// else if (userData.value.roles_id === '4' || userData.value.roles_id === '5' || userData.value.roles_id === '6' || userData.value.roles_id === '7' || userData.value.roles_id === '8' || userData.value.roles_id === '9' || userData.value.roles_id === '10')
+//   navItems = checkerDivisi
+// else
+//   navItems = adminMRK
 
 onMounted(() => {
   console.log(userData.value)

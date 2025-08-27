@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { VDataTableServer } from 'vuetify/labs/VDataTable'
 
-import { computed, ref } from 'vue'
 import AddNewDataDrawer from '@/views/data-management/support-group/AddNewData.vue'
 import type { DataProperties } from '@/views/data-management/support-group/types'
 import { paginationMeta } from '@api-utils/paginationMeta'
+import { computed, ref } from 'vue'
 
 // 👉 Store
 const searchQuery = ref('')
@@ -77,7 +77,7 @@ const resolveSupportGroupStatusVariant = (stat: string) => {
 }
 
 const isAddNewDataDrawerVisible = ref(false)
-const isConfirmDialogOpen = ref(false)
+const isConfirtableralogOpen = ref(false)
 
 const addData = () => {
   detailData.value = {
@@ -259,7 +259,7 @@ const deleteData = async (confirm: boolean) => {
 
         <!-- Actions -->
         <template #item.actions="{ item }">
-          <IconBtn @click="updateDeleteData(item.id); isConfirmDialogOpen = true">
+          <IconBtn @click="updateDeleteData(item.id); isConfirtableralogOpen = true">
             <VIcon icon="tabler-trash" />
           </IconBtn>
 
@@ -316,8 +316,8 @@ const deleteData = async (confirm: boolean) => {
     />
 
     <!-- Confirm Dialog -->
-    <ConfirmDialog
-      v-model:isDialogVisible="isConfirmDialogOpen"
+    <Confirtableralog
+      v-model:isDialogVisible="isConfirtableralogOpen"
       confirmation-question="Are you sure you want to delete this data?"
       confirm-title="Deleted!"
       confirm-msg="Your data has been deleted successfully."

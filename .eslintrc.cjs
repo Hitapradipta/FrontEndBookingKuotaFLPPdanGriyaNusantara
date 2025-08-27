@@ -212,7 +212,7 @@ module.exports = {
 
         {
           id: 'Disallow icon of icon library',
-          regex: 'mdi-\\w',
+          regex: 'tabler-\\w',
           message: 'Only \'tabler\' icons are allowed',
         },
 
